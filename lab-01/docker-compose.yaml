@@ -1,0 +1,28 @@
+services:
+  container-a:
+    container_name: container-a
+    build:
+      context: ./container-A
+      dockerfile: Dockerfile
+    volumes:
+      - ./container-A/index.html:/usr/share/nginx/html/index.html
+
+  container-b:
+    container_name: container-b
+    build:
+      context: ./container-B
+      dockerfile: Dockerfile
+    volumes:
+      - ./container-B/index.html:/usr/share/nginx/html/index.html
+
+  load-balancer:
+    container_name: load-balancer
+    image: nginx:1.23.3
+    ports:
+      - "8080:80"
+    volumes:
+      - ./load-balancer/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - container-a
+      - container-b
+

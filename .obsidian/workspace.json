@@ -1,0 +1,188 @@
+{
+  "main": {
+    "id": "c7ff417859accac5",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1d6ebaae3508f9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "31878763ab87eb3f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "iu-devsecops-lab-01-Iskander_Nafikov"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c336473516dd75a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "84cf6c7180d25bd6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5254c44adb30f8c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "f7ec7f92f2a66684",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b2104cf80487088b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "dc34ed87be359b93",
+    "type": "split",
+    "children": [
+      {
+        "id": "16117c45bb369072",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18523952c8beb711",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for iu-devsecops-lab-01-Iskander_Nafikov"
+            }
+          },
+          {
+            "id": "3830c75f0bd07054",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from iu-devsecops-lab-01-Iskander_Nafikov"
+            }
+          },
+          {
+            "id": "469ba0eb2ab60063",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "99b25b8bad761b3f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.pdf"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of iu-devsecops-lab-01-Iskander_Nafikov"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "31878763ab87eb3f",
+  "lastOpenFiles": [
+    "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.md",
+    "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.pdf",
+    "lab-01/images/Pasted image 20250126191828.png",
+    "lab-01/images/Pasted image 20250126192015.png",
+    "lab-01/images/Pasted image 20250126223743.png",
+    "lab-01/images/Pasted image 20250126223519.png",
+    "lab-01/images/Pasted image 20250126222629.png",
+    "lab-01/images/Pasted image 20250126222605.png",
+    "lab-01/images/Pasted image 20250126222558.png",
+    "lab-01/images/Pasted image 20250126220701.png",
+    "lab-01/load-balancer/nginx.conf",
+    "lab-01/load-balancer",
+    "lab-01/images/Pasted image 20250126213024.png",
+    "lab-01/images/Pasted image 20250126212946.png",
+    "lab-01/docker-compose.yaml",
+    "lab-01/container-B/index.html",
+    "lab-01/container-B/Dockerfile",
+    "lab-01/container-B",
+    "lab-01/container-A/index.html",
+    "lab-01/container-A/Dockerfile",
+    "lab-01/container-A",
+    "README.md"
+  ]
+}
