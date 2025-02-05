@@ -1,0 +1,6 @@
+# This task is needed to be able to manage containers without privileged access
+- name: Add default user to docker group
+  user:
+    name: "{{ ansible_ssh_user }}"
+    groups: docker
+    append: yes

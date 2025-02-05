@@ -1,0 +1,12 @@
+# Uses apt because it is pre-installed on Debian / Ubuntu
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#ansible-collections-ansible-builtin-apt-module
+- name: Install Docker Compose via apt
+  block:
+    - name: Update apt
+      apt:
+        update_cache: true
+
+    - name: Install docker-compose via apt
+      apt:
+        name: docker-compose
+        state: present

@@ -1,0 +1,15 @@
+app_name: app_python
+docker_image_name: iskanred/app_python
+docker_image_version: 1.0.0
+docker_container_name: app_python_container
+internal_port: 8080
+external_port: 80
+
+docker_image: "{{ docker_image_name }}:{{ docker_image_version }}"
+app_dir: "~/{{ app_name }}"
+docker_compose_filepath: "{{ app_dir }}/docker-compose.yml"
+
+# Enable if stopping application is necessary before start
+web_app_full_stop: true
+# Enable if wiping application files is necessary before start
+web_app_full_wipe: true

@@ -1,0 +1,13 @@
+- name: Deploy Kotlin Application
+  hosts: prod
+  roles:
+    - name: current_time_app
+      vars:
+        app_name: app_kotlin
+        docker_image_name: iskanred/app_kotlin
+        docker_image_version: 1.0.0
+        docker_container_name: app_kotlin_container
+        internal_port: 8080
+        external_port: 80
+        web_app_full_stop: true
+        web_app_full_wipe: false

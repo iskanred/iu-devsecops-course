@@ -1,0 +1,20 @@
+- name: Deploy Application using Docker Compose
+  block:
+    - name: Create application directory
+      file:
+        path: "{{ app_dir }}"
+        state: directory
+
+    - name: Create visits directory
+      file:
+        path: "{{ app_dir }}/visits_dir"
+        state: directory
+        # User inside the container should have access to `visits`
+        mode: o+rw
+
+    # Since handler will be notified docker-compose will run automatically
+    - name: Create docker-compose.yml file from template
+      template:
+        src: "docker-compose.yml.j2"
+        dest: "{{ docker_compose_filepath }}"
+      notify: docker_compose_restart_handler

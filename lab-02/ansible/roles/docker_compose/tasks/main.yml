@@ -1,0 +1,13 @@
+- name: Install Docker Compose
+  block:
+    - name: Install Docker Compose
+      include_tasks:
+        file: install_compose.yml
+      tags:
+        - install-compose
+
+    - name: Add default user to docker group
+      include_tasks:
+        file: add_user_to_group.yml
+      tags:
+        - add-user-to-group

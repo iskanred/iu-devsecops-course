@@ -1,0 +1,19 @@
+- name: Stop Application using Docker Compose
+  when:
+    - web_app_full_stop
+  block:
+    - name: Check Docker Compose file exists
+      stat:
+        path: "{{ docker_compose_filepath }}"
+      register: compose_file_stat
+
+    - name: Remove Docker Compose services
+      when: compose_file_stat.stat.exists
+      command: "docker-compose down"
+      args:
+        chdir: "{{ app_dir }}"
+
+    - name: Remove Docker Compose file
+      file:
+        path: "{{ docker_compose_filepath }}"
+        state: absent

@@ -1,0 +1,6 @@
+- name: Prepare Host
+  hosts: all
+  become: true
+  roles:
+    - docker_compose
+    - geerlingguy.docker

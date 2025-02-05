@@ -1,0 +1,19 @@
+- name: (Re)Deploy Web App
+  block:
+    # Executes only when `web_app_full_stop` flag is `true`
+    - name: Stop Application
+      import_tasks: stop_app.yml
+      tags:
+        - stop-app
+        - wipe-app
+
+    # Executes only when `web_app_full_wipe` flag is `true`
+    - name: Wipe Application
+      import_tasks: wipe_app.yml
+      tags:
+        - wipe-app
+
+    - name: Deploy Application
+      import_tasks: deploy_app.yml
+      tags:
+        - deploy-app
