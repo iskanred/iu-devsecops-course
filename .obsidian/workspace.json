@@ -4,51 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "8d919e846cb089ad",
+        "id": "267105de4b32d301",
         "type": "tabs",
         "children": [
           {
-            "id": "059c6ee4be7e08fd",
+            "id": "d30e476a86e58e3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lab-02/ansible/roles/current_time_app/README.md",
+                "file": "lab-03/iu-devsecops-lab-03-Iskander_Nafikov.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "dd6e8b2f6417dffb",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "lab-02/images/Pasted image 20250206021247.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250206021247"
-            }
-          },
-          {
-            "id": "487160051555a994",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lab-02/iu-devsecops-lab-02-Iskander_Nafikov.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "iu-devsecops-lab-02-Iskander_Nafikov"
+              "title": "iu-devsecops-lab-03-Iskander_Nafikov"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -80,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#ansible",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -190,53 +163,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "487160051555a994",
+  "active": "d30e476a86e58e3a",
   "lastOpenFiles": [
-    "lab-02/iu-devsecops-lab-02-Iskander_Nafikov.pdf",
-    "lab-02/images/Pasted image 20250206021247.png",
+    "README.md",
+    "lab-03/iu-devsecops-lab-03-Iskander_Nafikov.pdf",
+    "lab-03/iu-devsecops-lab-03-Iskander_Nafikov.md",
+    "lab-03/images/Pasted image 20250212234238.png",
+    "lab-03/images/Pasted image 20250212234147.png",
+    "lab-03/images/Pasted image 20250212234129.png",
+    "lab-03/images/Pasted image 20250212234105.png",
+    "lab-03/images/Pasted image 20250212234016.png",
+    "lab-03/images/Pasted image 20250212233921.png",
+    "lab-03/images/Pasted image 20250212233901.png",
+    "lab-03/images/Pasted image 20250212233844.png",
+    "lab-03/images/Pasted image 20250212233811.png",
+    "lab-03/images/Pasted image 20250212233329.png",
+    "lab-03/st15-repo/ansible/roles/current_time_server/tasks/main.yaml",
+    "lab-03/st15-repo/ansible/roles/current_time_server/defaults/main.yaml",
+    "lab-03/st15-repo/ansible/roles/current_time_server/tasks",
+    "lab-03/st15-repo/ansible/roles/current_time_server/defaults",
+    "lab-03/st15-repo/ansible/roles/current_time_server",
+    "lab-03/st15-repo/ansible/roles/current_time_app/defaults/main.yaml",
+    "lab-03/st15-repo/ansible/roles/current_time_app/defaults",
+    "lab-03/st15-repo/ansible/roles/geerlingguy.docker/molecule/default/molecule.yml",
+    "lab-03/st15-repo/ansible/roles/geerlingguy.docker/molecule/default/converge.yml",
+    "lab-03/st15-repo/ansible/roles/geerlingguy.docker/README.md",
+    "lab-03/st15-repo/iu-devsecops-lab-03-Iskander_Nafikov.md",
+    "lab-03/images/Pasted image 20250212000512.png.md",
+    "lab-03/st15-repo/build/reports/detekt/detekt.md",
+    "lab-03/st15-repo/README.md",
+    "lab-03/st15-repo/KOTLIN.md",
+    "lab-03/st15-repo/DOCKER.md",
+    "lab-03/st15-repo/CI.md",
+    "lab-01/iu-devsecops-lab-01-Iskander_Nafikov.md",
+    "lab-02/iu-devsecops-lab-02-Iskander_Nafikov.md",
     "lab-02/ansible/roles/docker_compose/README.md",
     "lab-02/ansible/roles/current_time_app/README.md",
-    "lab-02/iu-devsecops-lab-02-Iskander_Nafikov.md",
-    "lab-02/images/Pasted image 20250206021119.png",
-    "lab-02/images/Pasted image 20250206014304.png",
-    "lab-02/images/Pasted image 20250206013652.png",
-    "lab-02/images/Pasted image 20250206013603.png",
-    "lab-02/images/Pasted image 20250206013338.png",
-    "lab-02/images/Pasted image 20250206013150.png",
-    "lab-02/images/Pasted image 20250206013029.png",
-    "lab-02/images/Pasted image 20250206012920.png",
-    "lab-02/images/Pasted image 20250206012205.png",
-    "lab-02/ansible/roles/docker_compose/meta/main.yml",
-    "lab-02/ansible/roles/docker_compose/meta",
-    "lab-02/ansible/roles/docker_compose/tasks/add_user_to_group.yml",
     "lab-02/ansible/roles/geerlingguy.docker/README.md",
-    "lab-02/ansible/roles/geerlingguy.docker/vars/main.yml",
-    "lab-02/ansible/roles/geerlingguy.docker/vars/Archlinux.yml",
-    "lab-02/ansible/roles/geerlingguy.docker/vars/Alpine.yml",
-    "lab-02/ansible/roles/geerlingguy.docker/vars",
-    "lab-02/ansible/roles/geerlingguy.docker/molecule/default/converge.yml",
-    "lab-02/ansible/roles/geerlingguy.docker/molecule/default/molecule.yml",
-    "lab-02/ansible/roles/geerlingguy.docker/tasks/setup-Debian.yml",
     "lab-02/ansible/roles/web_app/README.md",
     "lab-02/ansible/roles/roles/docker_compose/README.md",
     "lab-02/ansible/roles/roles/docker/README.md",
     "lab-02/ansible/roles/roles/web_app/README.md",
-    "README.md",
     "lab-02/app_python/README.md",
     "lab-02/app_python/PYTHON.md",
     "lab-02/app_python/DOCKER.md",
     "lab-02/app_python/CI.md",
     "lab-02/app_kotlin/CI.md",
-    "lab-02/app_kotlin/DOCKER.md",
-    "lab-02/app_kotlin/README.md",
-    "lab-02/app_kotlin/KOTLIN.md",
-    "lab-02/CI.md",
-    "lab-02/DOCKER.md",
-    "lab-02/README.md",
-    "lab-02/KOTLIN.md",
-    "lab-02/ansible/ansible-env/lib/python3.13/site-packages/ansible_collections/wti/remote/README.md",
-    "lab-02/ansible/ansible-env/lib/python3.13/site-packages/ansible_collections/vyos/vyos/README.md",
-    "lab-02/ansible/ansible-env/lib/python3.13/site-packages/ansible_collections/vultr/cloud/README.md",
-    "lab-02/ansible/ansible-env/lib/python3.13/site-packages/ansible_collections/vultr/cloud/CONTRIBUTING.md"
+    "lab-02/app_kotlin/DOCKER.md"
   ]
 }

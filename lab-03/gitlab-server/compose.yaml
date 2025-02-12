@@ -1,0 +1,20 @@
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:17.6.4-ce.0
+    container_name: st15-gitlab
+    restart: always
+    hostname: 'st15.sne.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://st15.sne.com'
+    ports:
+      # - '443:443'
+      - target: 80
+        published: 80
+      - target: 22
+        published: 2222
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
