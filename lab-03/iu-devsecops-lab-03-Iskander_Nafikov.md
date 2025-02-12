@@ -169,7 +169,11 @@ g. Access the Gitlab server and log in, create a project name it as `<stx>-repo`
 > Write a simple web application in any programming language. (E.g. Random text or Addition of two numbers)
 
 - I created a simple web application using the Kotlin/Spring stack.
+<<<<<<< HEAD
 - This application provides information about current time in Europe/Moscow timezone and also shows  the number of getting this information (number of visits).
+=======
+- This application provides information about current time in Europe/Moscow timezone  also shows  the number of getting this information (number of visits).
+>>>>>>> ba9083e (comple lab-3)
 - Below is the file structure of this application
 	<img src="Pasted image 20250211214532.png" width=700/>
 - You can check the description of the application inside the [`lab-03/st15-repo/README.md`](st15-repo/README.md) in my GitHub [repository](https://github.com/iskanred/iu-devsecops-course/lab-03) for the course (as well as all the source code of the application).
