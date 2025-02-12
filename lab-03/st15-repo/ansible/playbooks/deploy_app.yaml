@@ -1,0 +1,6 @@
+- name: Deploy Application
+  hosts: all
+  roles:
+    - name: current_time_server
+      vars:
+        app_name: current-time-server

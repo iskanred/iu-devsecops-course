@@ -1,0 +1,28 @@
+- name: Create application directory
+  file:
+    path: "{{ app_dir }}"
+    state: directory
+
+- name: Create visits directory
+  file:
+    path: "{{ app_dir }}/visits_dir"
+    state: directory
+    # User inside the container should have access to `visits`
+    mode: o+rw
+
+- name: Pull Docker image
+  community.docker.docker_image:
+    name: "{{ docker_image }}"
+    state: present
+    source: pull
+    force_source: true
+
+- name: Run Docker container
+  community.docker.docker_container:
+    name: current-time-server
+    image: "{{ docker_image }}"
+    state: started
+    published_ports:
+      - "8080:8080"
+    volumes:
+      - "{{ app_dir }}/visits_dir/:/current-time-server/visits_dir"

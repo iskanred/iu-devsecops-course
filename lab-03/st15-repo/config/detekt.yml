@@ -1,0 +1,7 @@
+naming:
+  PackageNaming:
+    active: false
+
+performance:
+  SpreadOperator:
+    active: false

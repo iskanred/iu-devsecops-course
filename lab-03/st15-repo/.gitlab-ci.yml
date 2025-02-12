@@ -1,0 +1,99 @@
+stages:
+  - Build
+  - Check
+  - Push
+  - Deploy
+
+variables:
+  IMAGE_NAME: current-time-server
+  FULL_IMAGE_NAME: $IMAGE_NAME:1.0.0
+
+cache: &build_cache
+  # Take downloaded dependencies from cache
+  - key: gradle-dependencies-$CI_COMMIT_REF_SLUG
+    paths:
+      - .gradle/
+    policy: pull
+  # Take application executables
+  - key: gradle-build-$CI_COMMIT_REF_SLUG
+    paths:
+      - build/
+    policy: pull
+
+build application:
+  stage: Build
+  before_script: &export_gradle_user_home
+    # Say gradle to save dependencies in this directory
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+  script:
+    - ./gradlew clean bootJar --build-cache --no-daemon
+  cache:
+    # Cache downloaded dependencies for current branch only
+    - key: gradle-dependencies-$CI_COMMIT_REF_SLUG
+      paths:
+        - .gradle/
+      policy: pull-push
+    # Cache application executables for current branch only
+    - key: gradle-build-$CI_COMMIT_REF_SLUG
+      paths:
+        - build/
+      policy: push
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+
+run lint:
+  stage: Check
+  before_script: *export_gradle_user_home
+  script:
+    - ./gradlew detekt --no-daemon
+  cache: *build_cache
+  artifacts:
+    name: detekt-report
+    paths:
+      - build/reports/detekt
+  needs:
+    - "build application"
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+
+run tests:
+  stage: Check
+  before_script: *export_gradle_user_home
+  script:
+    - ./gradlew test --no-daemon
+  cache: *build_cache
+  artifacts:
+    name: junit-report
+    paths:
+      - build/reports/tests
+  needs:
+    - "build application"
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+
+build and push docker image:
+  stage: Push
+  before_script: &docker_login
+    - docker login --username $DOCKER_USER --password $DOCKER_PASSWORD
+  script:
+    - docker build --tag $DOCKER_USER/$FULL_IMAGE_NAME .
+    - docker push $DOCKER_USER/$FULL_IMAGE_NAME
+  cache: *build_cache
+  needs:
+    - "run lint"
+    - "run tests"
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+
+deploy application:
+  stage: Deploy
+  before_script: *docker_login
+  script:
+    - cd ansible
+    - >
+      ansible-playbook playbooks/deploy_app.yaml
+      --extra-vars "docker_image=$DOCKER_USER/$FULL_IMAGE_NAME"
+  # Run manually and only from "main" branch
+  when: manual
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
