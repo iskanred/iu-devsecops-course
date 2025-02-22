@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: current-time-server-config
+  labels:
+    app: current-time-server
+data:
+  secret: my-config-secret

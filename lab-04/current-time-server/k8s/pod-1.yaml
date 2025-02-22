@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: current-time-server-pod-1
+  labels:
+    app: current-time-server
+spec:
+  containers:
+    - name: current-time-server
+      image: iskanred/current-time-server:1.0.0
+      ports:
+        - containerPort: 8080

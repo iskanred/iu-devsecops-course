@@ -1,0 +1,5 @@
+.idea/
+.gitignore
+**/*.md
+.gradle/
+visits_dir/

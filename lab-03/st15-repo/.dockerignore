@@ -1,5 +1,0 @@
-.*ignore
-README.md
-.gitlab-ci.yaml
-ansible/
-.gradle/

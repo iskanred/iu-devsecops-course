@@ -2,6 +2,7 @@
   "readableLineLength": false,
   "vimMode": true,
   "pdfExportSettings": {
+    "includeName": false,
     "pageSize": "Letter",
     "landscape": false,
     "margin": "2",
